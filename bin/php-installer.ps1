@@ -4,7 +4,7 @@ $phpResponse = Invoke-WebRequest $phpPage
 $phpUrl = ""
 ForEach ($Link in $phpResponse.Links)
 {
-  If( $Link.href -match "/downloads/releases/php-7\.1\.\d+?-nts-Win32-VC14-x86\.zip" ){
+  If( $Link.href -match "/downloads/releases/php-7\.0\.\d+?-nts-Win32-VC14-x86\.zip" ){
     $phpUrl = (-join($phpBase, $Matches[0]))
   }
 }
